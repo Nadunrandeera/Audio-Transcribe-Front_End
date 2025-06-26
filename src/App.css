@@ -48,3 +48,91 @@
   justify-content: center;
   min-height: 100vh;
 }
+
+/* Meta + ChatGPT inspired theme for AudioUploader */
+body {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #e6e6e6;
+}
+
+.container.center-content {
+  background: rgba(34, 36, 40, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 48px 32px 32px 32px;
+  max-width: 420px;
+  margin: 48px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00c3ff 0%, #ffff1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
+input[type="file"] {
+  background: #232526;
+  color: #e6e6e6;
+  border: 1.5px solid #444;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+input[type="file"]:hover, input[type="file"]:focus {
+  border: 1.5px solid #00c3ff;
+}
+
+.upload-button {
+  background: linear-gradient(90deg, #00c3ff 0%, #ffff1c 100%);
+  color: #232526;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background 0.2s, color 0.2s;
+}
+.upload-button:hover {
+  background: linear-gradient(90deg, #ffff1c 0%, #00c3ff 100%);
+  color: #232526;
+}
+
+.transcription-result {
+  background: rgba(44, 47, 51, 0.85);
+  border-radius: 12px;
+  padding: 18px 20px 10px 20px;
+  margin-top: 12px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.transcription-result h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00c3ff;
+  margin: 0 0 8px 0;
+}
+.transcription-result + p {
+  color: #e6e6e6;
+  font-size: 1.05rem;
+  margin: 8px 0 0 0;
+  word-break: break-word;
+  white-space: pre-line;
+}
+

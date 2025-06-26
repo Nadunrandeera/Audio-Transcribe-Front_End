@@ -3,7 +3,7 @@ import "../App.css";
 import axios from "axios";
 
 const AudioUploader = () => {
-  const [file,setFile] = useState(null);
+  const [file, setFile] = useState(null);
   const [transcription, setTranscription] = useState("");
 
   const handleFileChange = (e) => {
@@ -28,14 +28,16 @@ const AudioUploader = () => {
     } catch (error) {
       console.log("Error transcribing audio", error);
     }
-  }
+  };
   return (
     <div className="container center-content">
-      <h1 className="">Audio To Text Transcribe</h1>
+      <h1 className="">EchoScript</h1>
+      <p>Upload your audio file and get the transcription instantly!</p>
+
       <div>
-        <input type="file" accept="audio/*" onChange={handleFileChange}/>
+        <input type="file" accept="audio/*" onChange={handleFileChange} />
       </div>
-      
+
       <div>
         <button className="upload-button" onClick={handleUpload}>
           Upload and Transcribe
@@ -43,8 +45,9 @@ const AudioUploader = () => {
       </div>
 
       <div className="transcription-result">
-        <h2>Transcription Result</h2></div>
-        <p>{transcription}</p>
+        <h2>Transcription Result</h2>
+      </div>
+      <p>{transcription}</p>
     </div>
   );
 };
