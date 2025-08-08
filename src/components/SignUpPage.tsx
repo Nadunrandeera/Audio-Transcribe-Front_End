@@ -4,7 +4,7 @@ import { Mail, Lock, User, Mic } from "lucide-react";
 import axios from "axios";
 
 export default function SignUpPage() {
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const [form, setForm] = useState({ username: "", email: "", password: "" });
   const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
@@ -12,27 +12,29 @@ export default function SignUpPage() {
     setForm({ ...form, [name]: value });
   };
 
-   const handleSubmit = async (e) => {
-     e.preventDefault();
-     try {
-       const response = await axios.post(
-         " http://localhost:8080/api/auth/signup",
-         form
-       );
-       setMessage("Signed up successfully!");
-       console.log(response.data);
-     } catch (error) {
-       setMessage("Failed to sign up. Please try again.");
-       console.error(error);
-     }
-   };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/api/auth/signup",
+        form
+      );
+      setMessage("Signed up successfully!");
+      console.log(response.data);
+    } catch (error) {
+      setMessage(
+        error.response?.data || "Failed to sign up. Please try again."
+      );
+      console.error(error);
+    }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
       <div className="flex flex-col md:flex-row bg-white rounded-2xl shadow-xl overflow-hidden w-full max-w-4xl">
         {/* Left Side */}
         <div className="bg-gradient-to-br from-blue-500 to-indigo-500 text-white p-8 md:w-1/2 flex flex-col justify-center">
-          <h1 className="text-3xl font-bold mb-4">🔊EchoScript</h1>
+          <h1 className="text-3xl font-bold mb-4">🔊 EchoScript</h1>
           <p className="mb-6 leading-relaxed">
             Transform your audio into accurate text effortlessly. Join
             EchoScript today and experience seamless transcription.
@@ -57,11 +59,11 @@ export default function SignUpPage() {
               <p className="flex items-center font-sans text-sm">User Name </p>
               <User className="absolute left-3 top-8 text-gray-400" />
               <input
-                name="name"
+                name="username"
                 type="text"
                 required
                 placeholder="John Doe"
-                value={form.name}
+                value={form.username}
                 onChange={handleChange}
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
               />
@@ -69,7 +71,7 @@ export default function SignUpPage() {
 
             <div className="relative">
               <p className="flex items-center font-sans text-sm">
-                Email Address{" "}
+                Email Address
               </p>
               <Mail className="absolute left-3 top-8 text-gray-400" />
               <input
@@ -82,6 +84,7 @@ export default function SignUpPage() {
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
               />
             </div>
+
             <div className="relative">
               <p className="flex items-center font-sans text-sm">Password </p>
               <Lock className="absolute left-3 top-8 text-gray-400" />
@@ -95,9 +98,11 @@ export default function SignUpPage() {
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
               />
             </div>
+
             <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow flex justify-center items-center gap-2">
               Sign up
             </Button>
+
             {message && (
               <p className="text-sm text-center text-red-500">{message}</p>
             )}

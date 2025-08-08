@@ -36,11 +36,11 @@ function LoginPage() {
       <div className="bg-white rounded-2xl shadow-lg flex max-w-4xl w-full overflow-hidden">
         <div className="w-1/2 p-10 flex flex-col items-center justify-center">
           <div className="flex items-center mb-4">
-            <span className="text-blue-600 text-3xl font-bold">
+            {/* <span className="text-blue-600 text-3xl font-bold">
               &#123; &#125;
-            </span>
+            </span> */}
             <h1 className="text-3xl font-bold text-gray-800 ml-2">
-              EchoScript
+              🔊 EchoScript
             </h1>
           </div>
           <p className="text-center text-gray-600 mb-6 text-sm">
@@ -54,8 +54,8 @@ function LoginPage() {
         </div>
 
         <div className="w-1/2 bg-white p-10">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">Login</h2>
-          <p className="text-sm text-gray-500 mb-6">
+          <h2 className="text-3xl font-bold mb-1 flex items-center">Login</h2>
+          <p className="text-sm text-gray-500 mb-6 flex items-center gap-2 font-semibold">
             Hello! Let's get started.
           </p>
 
@@ -124,9 +124,16 @@ function LoginPage() {
           <div className="mt-6 border-t pt-4 text-center">
             <p className="text-sm mb-2 text-gray-500">Or continue with</p>
             <button className="border rounded px-4 py-2 flex items-center mx-auto text-sm">
-              <span className="mr-2 bg-black text-white px-2 py-1 rounded">
+              {/* <span className="mr-2 bg-black text-white px-2 py-1 rounded">
                 G
-              </span>{" "}
+              </span>{" "} */}
+              <img
+                src="./src/assets/icons8-google-48.png"
+                alt=""
+                width={20}
+                height={20}
+                className="mr-2"
+              />
               Sign in with Google
             </button>
           </div>
