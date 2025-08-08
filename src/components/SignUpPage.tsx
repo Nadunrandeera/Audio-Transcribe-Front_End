@@ -95,15 +95,17 @@ export default function SignUpPage() {
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none"
               />
             </div>
-            <Button className="w-full bg-sky-500 text-white font-semibold py-2 rounded-md">
+            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow flex justify-center items-center gap-2">
               Sign up
             </Button>
-            {message && <p className="text-sm text-center text-red-500">{message}</p>}
+            {message && (
+              <p className="text-sm text-center text-red-500">{message}</p>
+            )}
           </form>
 
           <p className="text-sm text-gray-500 mt-4 text-center">
             Already have an account?{" "}
-            <a href="#" className="text-blue-500 font-medium">
+            <a href="/login" className="text-blue-500 font-medium">
               Log in
             </a>
           </p>
@@ -113,9 +115,30 @@ export default function SignUpPage() {
               Or sign up using
             </p>
             <div className="flex justify-center gap-4">
-              <button className="w-10 h-10 bg-gray-100 rounded-md">🌐</button>
-              <button className="w-10 h-10 bg-gray-100 rounded-md">f</button>
-              <button className="w-10 h-10 bg-gray-100 rounded-md">🟩</button>
+              <button>
+                <img
+                  src="./src/assets/icons8-google-48.png"
+                  alt=""
+                  width={30}
+                  height={30}
+                />
+              </button>
+              <button>
+                <img
+                  src="./src/assets/icons8-facebook-logo-48.png"
+                  alt=""
+                  width={30}
+                  height={30}
+                />
+              </button>
+              <button>
+                <img
+                  src="./src/assets/icons8-twitter-bird-48.png"
+                  alt=""
+                  width={30}
+                  height={30}
+                />
+              </button>
             </div>
           </div>
         </div>
