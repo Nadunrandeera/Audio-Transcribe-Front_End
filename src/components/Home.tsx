@@ -11,17 +11,17 @@ export default function Home() {
           <span className="text-2xl">🔊</span> EchoScript
         </div>
         <div className="space-x-4">
-          <a href="#" className="text-sm text-gray-700">
+          {/* <a href="/features" className="text-sm text-gray-700">
             Features
           </a>
-          <a href="#" className="text-sm text-gray-700">
+          <a href="/pricing" className="text-sm text-gray-700">
             Pricing
-          </a>
-          <a href="#" className="text-sm text-gray-700">
+          </a> */}
+          <a href="/login" className="text-sm text-gray-700">
             Sign In
           </a>
-          <Button className="bg-blue-600 text-white px-4 py-2 rounded-md">
-            Sign Up
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">
+            <a href="/signup">Sign Up</a>
           </Button>
         </div>
       </nav>
@@ -39,7 +39,7 @@ export default function Home() {
             podcasts, and more.
           </p>
           <Button className="bg-white text-blue-600 font-semibold px-6 py-3 shadow-md">
-            Get Started for Free →
+            <a href="/transcription">Get Started for Free</a>
           </Button>
         </div>
       </section>

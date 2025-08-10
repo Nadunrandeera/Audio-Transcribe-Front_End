@@ -10,12 +10,12 @@ import Home from "./components/Home";
 const App = () => {
   return (
     <>
-      {/* <Routes>
-        <Route path="/login" element={<LoginPage />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignUpPage />} />
-      </Routes> */}
-      <SignUpPage />
-
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/transcription" element={<AudioTranscriptionPage />} />
+      </Routes>
     </>
   );
 };

@@ -60,7 +60,9 @@ export default function AudioTranscriptionPage() {
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 py-8">
       <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-2xl text-center">
         <div className="text-left mb-4">
-          <ArrowLeft className="text-blue-500 cursor-pointer" />
+          <a href="/">
+            <ArrowLeft className="text-blue-500 cursor-pointer" />
+          </a>
         </div>
         <h1 className="text-3xl font-bold text-blue-700 mb-1">EchoScript</h1>
         <p className="text-gray-500 mb-6">
