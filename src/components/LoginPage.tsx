@@ -106,7 +106,9 @@ function LoginPage() {
               type="submit"
               className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow flex justify-center items-center gap-2"
             >
-              <span className="text-lg">⇨</span> Login
+              <a href="/transcription">
+                <span className="text-lg">⇨</span> Login
+              </a>
             </Button>
           </form>
 
